@@ -110,7 +110,7 @@ void demoDataTypeOverflow(int totalItemsCount, some_structure* pItem, int itemPo
 	int bytesToAllocation = totalItemsCount * sizeof(some_structure);
 	printf("Bytes to allocation: %d\n", bytesToAllocation);
 	data_copy = (some_structure*)malloc(bytesToAllocation);
-	if (itemPosition >= 0 && itemPosition < totalItemsCount) {
+	if (itemPosition >= 0 && itemPosition < totalItemsCount && itemPosition + sizeof(some_structure) < bytesToAllocation) {
 		memcpy(&(data_copy[itemPosition]), pItem, sizeof(some_structure));
 	}
 	else {
