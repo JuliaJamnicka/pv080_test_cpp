@@ -13,8 +13,8 @@ int memcheckFailDemo(int* arrayStack, unsigned int arrayStackLen,
   
   array[2] = 0; 
 
-  arrayStack[100] = 0; 
-  arrayHeap[100] = 0; 
+  arrayStack[0] = 0; 
+  arrayHeap[0] = 0; 
 
   for (unsigned int i = 0; i <= arrayStackLen; i++) {
       arrayStack[i] = 0;
